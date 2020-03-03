@@ -1,0 +1,24 @@
+@font-face {font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_1660466_bk18s1urv5m.eot?t=1582799893724'); /* IE9 */
+    src: url('//at.alicdn.com/t/font_1660466_bk18s1urv5m.eot?t=1582799893724#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANUAAsAAAAAB0AAAAMHAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCKIIPATYCJAMMCwgABCAFhG0HNRtUBsieA+7mEixp4mS4k2uxH+HxwP84/PswgAmMW/bpS2SC4kKCWmdpPF3/h+b/1Znf9Oxj1iGDnLD8FOWwSDB1R5rasRvghIwNhmc/rURArvZ5Lqc3xe+qb1kuc9LYE496AcYBBbQ3HgUUaIEE5A1jF7TExwSU6pSEm6pp6gJFZq4KCLsG3Tgombgss1KxoLDiYBZuQVIcz/jHAG6C74efkBGFqCAxN07vVE9B2Yf80UdY9n+ZIY8A7XResGMkDAGZsFLpnyNE+SGCUtUkar2gUBbEqVL//xNoNFvhRv94kVDIbC4HfbAQ+ZAdOYEPHxEiSKAQRVgADiFb/55JblHEameH6gVH7vltz+vXXeB4fs6f338+2u3sxSDhwIWJd+823g3O285CxanzrefB4uEX2S53X4VJR16OOW3cvWyXo+P5nuV7585cWH5x4/ll53oLhLOTk/hGJ5eL3ZB2XGgVR5avNXCW0pvKkapQjx74Ct38nQlfoeeuEppnBrbYl0HzVMmKL/ePB4lftnDtvNN1pwvXAvLAlfudULW8322/XK2sd1vPn8xC66LXxaCpj3fYJx+R9ykN8n6ohNNhDeD/hCyhFBYrRArlP+A3fm3e/XvUregXpwzeF9/zgdH/FaFbEBSfXiDwurUd+7Jmh61Z0TgaI5CMpGpElGoh/5nhWh+G2xo6NxMUa0gQFelAUqyLzOwQCpQZRqFioyg1qPZ4mTqUIOQSDFgNEFS7iqjSE5JqT8jMvkeBRp9QqDoCSs0ErwvL9MTgWEnxOMNTaGIOGSaJVbVdzDFs7cA6u3mcpvUB14OpzZBC6Slp+VIttmI6xRbbtC6DMRWplFhQDXgOm80EaZQY8SRL0TOmFaSmqlUvSpkkFnA0icLGMdgUZMIcxGASYaV6wxnHwuc7YDp2ZuNog6Cq2AOjbAzjI+lSpHUgay3WToJbEWMzTScDw6gQFUVYIDXAi5mtPIFo1fOMsElMCv2ArKZAKhqkdrWkLG+zvN8RKGXelEIMKWTpxE4kTU+sGAAA') format('woff2'),
+    url('//at.alicdn.com/t/font_1660466_bk18s1urv5m.woff?t=1582799893724') format('woff'),
+    url('//at.alicdn.com/t/font_1660466_bk18s1urv5m.ttf?t=1582799893724') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_1660466_bk18s1urv5m.svg?t=1582799893724#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-suo:before {
+    content: "\e607";
+  }
+  
+  .icon-phone:before {
+    content: "\e615";
+  }

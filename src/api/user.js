@@ -14,3 +14,10 @@ export function apiLogin ({ mobile, code }) {
     }
   })
 }
+// 封装一个联想的方法
+export function apiThink (key) {
+  return http({
+    url: `/suggestion?q=${key}`,
+    method: 'GET'
+  })
+}

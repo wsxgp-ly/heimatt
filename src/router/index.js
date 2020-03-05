@@ -10,6 +10,10 @@ import Home from '../views/home/home.vue'
 import Layout from '../views/layout'
 // 导入 我的 my 页面
 import My from '../views/my'
+// 导入 Search 页面
+import Search from '../views/search'
+// 导入 searchResult
+import SearchResult from '../views/searchResult'
 
 Vue.use(Router)
 
@@ -38,8 +42,18 @@ const router = new Router({
         {
           path: '/my',
           component: My
+        },
+        // 添加搜索页面
+        {
+          path: '/search',
+          component: Search
         }
       ]
+    },
+    // 添加一个 searchResult 路由
+    {
+      path: '/searchResult/:key',
+      component: SearchResult
     }
   ]
 })

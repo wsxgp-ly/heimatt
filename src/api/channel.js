@@ -8,3 +8,20 @@ export function apiGetchannel () {
     method: 'GET'
   })
 }
+// 封装一个得到所有频道的数据接口
+export function apiGetAllchannel () {
+  return http({
+    url: '/channels',
+    method: 'GET'
+  })
+}
+// 封装 一个修改频道数据的方法
+export function apiResetChannel (channels) {
+  return http({
+    url: '/user/channels',
+    method: 'PUT',
+    data: {
+      channels: channels
+    }
+  })
+}

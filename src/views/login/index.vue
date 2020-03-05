@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       obj: {
-        mobile: '13911111111',
+        mobile: '15586865656',
         code: '246810'
       },
       // 验证的文本

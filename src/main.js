@@ -15,11 +15,15 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 // 使用dayjs的语言包
 import 'dayjs/locale/zh-cn'
+// 导入 MyPlugin
+import MyPlugin from './utils/myplugin'
 
 // 使用vant
 Vue.use(Vant)
 // 使用Lazyload 图片懒加载
 Vue.use(Lazyload)
+// 使用 MyPlugin 验证是否登录
+Vue.use(MyPlugin)
 
 Vue.config.productionTip = false
 
@@ -33,6 +37,7 @@ Vue.filter('myrelativeTime', function (value) {
   // 这个value  就是使用这个锅炉器的字符串
   return dayjs().from(dayjs(value))
 })
+
 new Vue({
   router,
   store,

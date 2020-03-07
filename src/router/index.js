@@ -14,6 +14,8 @@ import My from '../views/my'
 import Search from '../views/search'
 // 导入 searchResult
 import SearchResult from '../views/searchResult'
+// 导入 detail
+import Detail from '../views/detail'
 
 Vue.use(Router)
 
@@ -26,6 +28,11 @@ const router = new Router({
     // 登录路由
     {
       path: '/login',
+      component: Login
+    },
+    // 添加一个验证登录的路由
+    {
+      path: '/checkLogin',
       component: Login
     },
     // 父路由  layout
@@ -54,6 +61,11 @@ const router = new Router({
     {
       path: '/searchResult/:key',
       component: SearchResult
+    },
+    // 添加一个 detail 路由(动态路由) artid 就是文章id
+    {
+      path: '/detail/:artid',
+      component: Detail
     }
   ]
 })

@@ -35,3 +35,12 @@ export function apiReport ({ artid, type }) {
     }
   })
 }
+
+// 封装一个搜索的方法
+
+export function apiGetSearch ({ page, perpage, key }) {
+  return http({
+    url: `/search?page=${page}&per_page${perpage}&q=${key}`,
+    method: 'GET'
+  })
+}

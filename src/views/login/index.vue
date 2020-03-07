@@ -73,10 +73,17 @@ export default {
           // 将登录成功后的信息保存到  localsroreage 中
           // window.localStorage.setItem('userInfo', JSON.stringify(res.data.data))
           setLocal('userInfo', res.data.data)
-          // 跳转到首页
-          // console.log(res.data.data)
 
-          this.$router.push('/home')
+          // 得到当前的路由名称
+          const name = this.$route.path
+          // 判断  如果当前的路由名为 checkLogin:退回到上一个页面
+          if (name === '/checkLogin') {
+            // 退回到上一个页面
+            this.$router.back()
+          } else {
+            // 跳转到首页
+            this.$router.push('/home')
+          }
         } catch (err) {
           // console.log(err)
           // 登录失败 提示用户

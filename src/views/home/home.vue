@@ -210,7 +210,7 @@ export default {
 }
 // /deep/ 叫做深度选择器
 // 作用:可以当前设置过 scoped 属性的样式作用到它下面的子组件中
-/deep/ .van-tabs__wrap.van-tabs__wrap--scrollable.van-hairline--top-bottom {
+/deep/ .van-tabs__wrap.van-hairline--top-bottom {
   position: fixed;
   top: 46px;
   left: 0px;

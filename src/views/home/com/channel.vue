@@ -23,7 +23,7 @@
         <van-grid-item @click="changeActive(index)" class="crossFather" v-for="(item,index) in channelList" :key="index">
           <template slot="text">
             <span :class="{active: active === index}">{{item.name}}</span>
-            <van-icon @click="delChannel(item)" v-if="isEidt===true && index != 0" class="crossSon" name="close" />
+            <van-icon @click.stop="delChannel(item)" v-if="isEidt===true && index != 0" class="crossSon" name="close" />
             </template>
         </van-grid-item>
       </van-grid>
@@ -70,6 +70,11 @@ export default {
     },
     // 点击添加频道
     async addChannel (item) {
+      // 给 item 添加额外属性
+      this.$set(item, 'articleList', [])
+      this.$set(item, 'loading', false)
+      this.$set(item, 'finished', false)
+      this.$set(item, 'isLoading', false)
       // 添加到我的频道中
       this.channelList.push(item)
       // 1-判断用户是否登录

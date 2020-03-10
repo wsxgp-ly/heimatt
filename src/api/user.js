@@ -40,3 +40,10 @@ export function apiDisFollowUser (autid) {
     method: 'DELETE'
   })
 }
+
+// 封装一个用户获取自己信息的方法
+export function apiGetSelfInfo () {
+  return http({
+    url: '/user'
+  })
+}

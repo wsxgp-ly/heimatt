@@ -57,15 +57,15 @@ const router = new Router({
         }
       ]
     },
-    // 添加一个 searchResult 路由
-    {
-      path: '/searchResult/:key',
-      component: SearchResult
-    },
     // 添加一个 detail 路由(动态路由) artid 就是文章id
     {
       path: '/detail/:artid',
       component: Detail
+    },
+    // 添加一个 searchResult 路由
+    {
+      path: '/searchResult/:key',
+      component: SearchResult
     }
   ]
 })

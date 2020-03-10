@@ -5,20 +5,20 @@
         <div class="comBox">
           <div class="img">
             <img
-              src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583613884253&di=7405ad50bc0491549b3c291e7cee3422&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20171028%2F93f19e3e70b94b33a99b6d222170db07.jpeg"
+              :src="commentMsg.aut_photo"
               alt
             />
           </div>
           <div class="msg">
-            <div class="author">彭于晏</div>
-            <div class="content">这是评论内容</div>
+            <div class="author">{{commentMsg.aut_name}}</div>
+            <div class="content">{{commentMsg.content}}</div>
             <div class="info">
-              <span>1个月前</span>
-              <van-button round class="btn" size="small" color="#eff7f8">回复 6</van-button>
+              <span>{{commentMsg.pubdate | myrelativeTime}}</span>
+              <van-button v-if="isreply === false" @click="openreply" round class="btn" size="small" color="#eff7f8">回复 {{commentMsg.reply_count}}</van-button>
             </div>
           </div>
           <div class="like">
-            <van-icon name="like" /> 0
+            <van-icon name="like" /> {{commentMsg.like_count}}
           </div>
         </div>
       </template>
@@ -27,7 +27,21 @@
 </template>
 
 <script>
-export default {}
+// 导入 bus 组件
+import bus from '../../../utils/bus'
+export default {
+  // commentMsg 当前评论的数据
+  // isreply : 控制回复按钮的显示与隐藏
+  props: ['commentMsg', 'isreply'],
+  methods: {
+    // 打开回复面板
+    openreply () {
+      this.$emit('showreply', true)
+      // 将当前评论数据传入到 eventbus 中
+      bus.$emit('passcomment', this.commentMsg)
+    }
+  }
+}
 </script>
 
 <style lang='less' scoped>

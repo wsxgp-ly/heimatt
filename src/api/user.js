@@ -21,3 +21,22 @@ export function apiThink (key) {
     method: 'GET'
   })
 }
+
+// 封装一个关注用户的接口
+export function apiFollowUser (autid) {
+  return http({
+    url: '/user/followings',
+    method: 'POST',
+    data: {
+      target: autid
+    }
+  })
+}
+
+// 封装一个取消关注用户的接口
+export function apiDisFollowUser (autid) {
+  return http({
+    url: `/user/followings/${autid}`,
+    method: 'DELETE'
+  })
+}

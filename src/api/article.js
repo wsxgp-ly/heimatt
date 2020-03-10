@@ -44,3 +44,36 @@ export function apiGetSearch ({ page, perpage, key }) {
     method: 'GET'
   })
 }
+
+// 封装一个得到文章详情的方法
+export function apiGetArticelById (artid) {
+  return http({
+    url: `/articles/${artid}`
+  })
+}
+
+// 封装一个文章的点赞方法
+export function apiAddZan (artid) {
+  return http({
+    url: '/article/likings',
+    method: 'POST',
+    data: {
+      target: artid
+    }
+  })
+}
+// 封装一个文章的取消点赞方法
+export function apiDisZan (artid) {
+  return http({
+    url: `/article/likings/${artid}`,
+    method: 'DELETE'
+  })
+}
+
+// 封装一个文章的取消不喜欢方法
+export function apiUnDisLike (artid) {
+  return http({
+    url: `/article/dislikes/${artid}`,
+    method: 'DELETE'
+  })
+}
